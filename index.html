@@ -17,7 +17,7 @@ body {
 
 .column {
   float: left;
-  width: 50%;
+  width: 33.33%;
   padding: 10px;
   border: solid;
   cursor: pointer;
@@ -50,6 +50,7 @@ img {
 <script>
 	var osobo = true;
 	var aqua = false;
+	var rewards = false;
 	
 	function changeToOsobo() {
 		document.getElementById("osobo").style.display="block";
@@ -59,16 +60,38 @@ img {
 		document.getElementById("aqua").style.display="none";
 		document.getElementById("aquaTeam").classList.remove("team");
 		document.getElementById("aquaTeam").setAttribute('onclick', 'changeToAqua()');
+		
+		document.getElementById("rewards").style.display="none";
+		document.getElementById("rewardsTeam").classList.remove("team");
+		document.getElementById("rewardsTeam").setAttribute('onclick', 'changeToRewards()');
 	}
 	
 	function changeToAqua() {
+		document.getElementById("aqua").style.display="block";
+		document.getElementById("aquaTeam").classList.add("team");
+		document.getElementById("aquaTeam").setAttribute('onclick', '#');
+	
 		document.getElementById("osobo").style.display="none";
 		document.getElementById("osoboTeam").classList.remove("team");
 		document.getElementById("osoboTeam").setAttribute('onclick', 'changeToOsobo()');
 		
-		document.getElementById("aqua").style.display="block";
-		document.getElementById("aquaTeam").classList.add("team");
-		document.getElementById("aquaTeam").setAttribute('onclick', '#');
+		document.getElementById("rewards").style.display="none";
+		document.getElementById("rewardsTeam").classList.remove("team");
+		document.getElementById("rewardsTeam").setAttribute('onclick', 'changeToRewards()');
+	}
+	
+	function changeToRewards() {
+		document.getElementById("rewards").style.display="block";
+		document.getElementById("rewardsTeam").classList.add("team");
+		document.getElementById("rewardsTeam").setAttribute('onclick', '#');
+	
+		document.getElementById("osobo").style.display="none";
+		document.getElementById("osoboTeam").classList.remove("team");
+		document.getElementById("osoboTeam").setAttribute('onclick', 'changeToOsobo()');
+		
+		document.getElementById("aqua").style.display="none";
+		document.getElementById("aquaTeam").classList.remove("team");
+		document.getElementById("aquaTeam").setAttribute('onclick', 'changeToAqua()');
 	}
 </script>
 </head>
@@ -89,17 +112,61 @@ img {
 						Аква-рэйверы
 						<span class='h2subtitle'>(Первая игра - 29.07.2022)
 					</div>
+					<div id='rewardsTeam' class="column" onclick='changeToRewards()'>
+						Специальные награды
+						<span class='h2subtitle'> =)
+						</span>
+					</div>
 				</h2>
 			</div>
 			<h2>
-			<div id='osobo'>
-				<img src="img/osobo/04.08.2021.jpg" style="z-index: -1;"></img>
-				<span class='h2subtitle'>"Обо всём" (04.08.2021)<br/>
-				Первая игра</span>
+			
+			<div id='rewards' style='display: none'>
 				
 				<img src="img/osobo/18.08.2021.jpg"></img>
 				<span class='h2subtitle'>"Обо всём" (18.08.2021)<br/>
 				Победа в конкурсе костюмов (Тематика - Пляжная вечеринка)</span>
+				
+				<img src="img/osobo/10.11.2021.jpg"></img>
+				<span class='h2subtitle'>"Обо всём" (10.11.2021)<br/>
+				Участие в конкурсе костюмов (Тематика - "Пижамная вечеринка")<br/>
+				+ Победа в фотоконкурсе</span>
+				
+				<img src="img/osobo/20.04.2022.jfif"></img>
+				<span class='h2subtitle'>"Обо всём" (20.04.2022)<br/>
+				Победа в конкурсе костюмов (Тематика - "Вечерние наряды")</span>
+				
+				<img src="img/osobo/29.06.2022.jpg"></img>
+				<span class='h2subtitle'>"Обо всём" (29.06.2022)<br/>
+				!!! Победа в конкурсе костюмов<br/>
+				(Тематика - пиратская вечеринка)</span>
+				
+				<img src="img/osobo/13.07.2022a.jpg"></img>
+				<span class='h2subtitle'>"Обо всём" (13.07.2022)<br/>
+				Посвящение в Знатоков</span>
+				
+				<img src="img/osobo/11.01.2023.jpg"></img>
+				<span class='h2subtitle'>"Обо всём" (11.01.2023)<br/>
+				Посвящение в Кардиналов</span>
+				
+				<img src="img/osobo/11.10.2023.jpg"></img>
+				<span class='h2subtitle'>"Обо всём" (11.10.2023)<br/>
+				Посвящение в Императоров</span>
+				
+				<img src="img/osobo/29.12.2024.jpg"></img>
+				<span class='h2subtitle'>"Чисто попеть" (29.12.2024)<br/>
+				Посвящение в Чародеев</span>
+				
+				<img src="img/osobo/КиШ.jpg"></img>
+				<span class='h2subtitle'>"Король и шут" (27.02.2025)<br/>
+				Аффтар пакета</span>
+				
+			</div>
+			
+			<div id='osobo'>
+				<img src="img/osobo/04.08.2021.jpg" style="z-index: -1;"></img>
+				<span class='h2subtitle'>"Обо всём" (04.08.2021)<br/>
+				Первая игра</span>
 				
 				<img src="img/osobo/01.09.2021.jpg"></img>
 				<span class='h2subtitle'>"Обо всём" (01.09.2021)<br/>
@@ -107,17 +174,11 @@ img {
 				
 				<img src="img/osobo/10.11.2021.jpg"></img>
 				<span class='h2subtitle'>"Обо всём" (10.11.2021)<br/>
-				3 место<br/>
-				+ Победа в фотоконкурсе<br/>
-				Участие в конкурсе костюмов (Тематика - "Пижамная вечеринка")</span>
+				3 место</span>
 				
 				<img src="img/osobo/09.01.2022.jpg"></img>
 				<span class='h2subtitle'>"Сверхъестественное" (09.01.2022)<br/>
 				1 место!!!</span>
-				
-				<img src="img/osobo/20.04.2022.jfif"></img>
-				<span class='h2subtitle'>"Обо всём" (20.04.2022)<br/>
-				Победа в конкурсе костюмов (Тематика - "Вечерние наряды")</span>
 				
 				<img src="img/osobo/18.05.2022.jpg"></img>
 				<span class='h2subtitle'>"Обо всём" (18.05.2022)<br/>
@@ -126,11 +187,6 @@ img {
 				<img src="img/osobo/22.06.2022.jfif"></img>
 				<span class='h2subtitle'>"Обо всём" (22.06.2022)<br/>
 				1 место!!!</span>
-				
-				<img src="img/osobo/29.06.2022.jpg"></img>
-				<span class='h2subtitle'>"Обо всём" (29.06.2022)<br/>
-				!!! Победа в конкурсе костюмов<br/>
-				(Тематика - пиратская вечеринка)</span>
 				
 				<img src="img/osobo/13.07.2022.jpg"></img>
 				<span class='h2subtitle'>"Обо всём" (13.07.2022)<br/>
@@ -156,10 +212,6 @@ img {
 				<img src="img/osobo/14.12.2022.jpg"></img>
 				<span class='h2subtitle'>"Обо всём" (14.12.2022)<br/>
 				3 место</span>
-				
-				<img src="img/osobo/11.01.2023.jpg"></img>
-				<span class='h2subtitle'>"Обо всём" (11.01.2023)<br/>
-				Посвящение в Кардиналов</span>
 					
 				<img src="img/osobo/25.01.2023.jpg"></img>
 				<span class='h2subtitle'>"Обо всём" (25.01.2023)<br/>
@@ -171,8 +223,7 @@ img {
 				
 				<img src="img/osobo/11.10.2023.jpg"></img>
 				<span class='h2subtitle'>"Обо всём" (11.10.2023)<br/>
-				Посвящение в Императоров<br/>
-				И также 2 место!!!</span>
+				2 место!!!</span>
 				
 				<img src="img/osobo/17.10.2023.jpg"></img>
 				<span class='h2subtitle'>"Музыкальный марафон" (17.10.2023)<br/>
@@ -193,10 +244,6 @@ img {
 				<img src="img/osobo/05.10.2024.jpg"></img>
 				<span class='h2subtitle'>"Чисто попеть" (05.10.2024)<br/>
 				2 место</span>
-				
-				<img src="img/osobo/29.12.2024.jpg"></img>
-				<span class='h2subtitle'>"Чисто попеть" (29.12.2024)<br/>
-				Посвящение в Чародеев</span>
 				
 				<img src="img/osobo/11.02.2025.jpg"></img>
 				<span class='h2subtitle'>"Литература" (11.02.2025)<br/>
